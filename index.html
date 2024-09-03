@@ -48,6 +48,7 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">CityGuessr: City-Level Video Geo-Localization on a Global Scale</h1>
+          <h2 class="subtitle conference">European Conference on Computer Vision(ECCV) 2024</h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               ,<a href="https://scholar.google.com/citations?user=OHC7c90AAAAJ&hl=en">Parth Parag Kulkarni<sup>1</sup>,</span>
@@ -67,7 +68,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="https://drive.google.com/file/d/1xomm0v6VdguZT4brC3_KTX5Opqkj8eCE/view?usp=sharing"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -76,7 +77,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://drive.google.com/file/d/1xomm0v6VdguZT4brC3_KTX5Opqkj8eCE/view?usp=sharing"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -86,7 +87,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                <a href="https://parthpk.github.io/cityguessr-webpage/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -96,7 +97,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/ParthPK/CityGuessr"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -106,7 +107,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                <a href="https://github.com/ParthPK/CityGuessr"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -121,24 +122,7 @@
     </div>
   </div>
 </section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section>
-
-
+  
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
@@ -205,31 +189,19 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Video geolocalization is a crucial problem in current times.  Given just a video, ascertaining where it was captured  
+            from can have a plethora of advantages. The problem of worldwide geolocalization has been tackled before, but only 
+            using the image modality. Its video counterpart remains relatively unexplored. Meanwhile, video geolocalization has 
+            also garnered some attention in the recent past, but the existing methods are all restricted to specific regions. 
+            This motivates us to explore the problem of video geolocalization at a global scale. Hence, we propose a novel problem 
+            of worldwide video geolocalization with the objective of hierarchically predicting the correct city, state/province, 
+            country, and continent, given a video. However, no large scale video datasets that have extensive worldwide coverage 
+            exist, to train models for solving this problem. To this end, we introduce a new dataset, "<i>CityGuessr68k</i>" 
+            comprising of 68,269 videos from 166 cities all over the world. We also propose a novel baseline approach to this 
+            problem, by designing a transformer-based architecture comprising of an elegant "<i>Self-Cross Attention}</i>" module 
+            for incorporating scenes as well as a `"<i>TextLabel Alignment</i>" strategy for distilling knowledge from textlabels 
+            in feature space. To further enhance our location prediction, we also utilize soft-scene labels. Finally we demonstrate 
+            the performance of our method on our new dataset as well as Mapillary(MSLS).
           </p>
         </div>
       </div>
