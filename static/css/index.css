@@ -123,6 +123,12 @@ body {
   font-size: 0;
 }
 
+.results-carousel .caption {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
 .results-carousel video {
   margin: 0;
 }
